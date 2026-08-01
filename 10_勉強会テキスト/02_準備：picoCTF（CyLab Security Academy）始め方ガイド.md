@@ -100,6 +100,8 @@
 2. **「Submit Flag」** ボタンを押します。
 3. 正解すると **「Correct!」** と表示され、ポイントが加算されます！解いた問題には正解マークがつきます。
 
+<img width="1080" height="826" alt="image" src="https://github.com/user-attachments/assets/2b2f6bc7-6c1a-42f3-aabd-4444d8b5a012" />
+
 ---
 
 ## 5. 補足：Webシェル（Web Shell）について
