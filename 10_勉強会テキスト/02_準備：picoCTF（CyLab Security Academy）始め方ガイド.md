@@ -27,12 +27,16 @@
 ### 📝 登録手順（サインアップ）
 
 1. ブラウザで **<https://cylabacademy.org/>** にアクセスします。
-2. 画面右上にある **「Sign Up」** をクリックします。
+2. 画面右上にある **「Sign Up」** をクリックし、遷移したページで再度画面右上にある **「Sign Up」** をクリックします。
+<img width="1083" height="729" alt="image" src="https://github.com/user-attachments/assets/5dd3548a-8bbb-416d-b8bc-0301c471a36e" />
+<img width="1081" height="728" alt="image" src="https://github.com/user-attachments/assets/118dc1b2-1e86-423d-acd4-1b4a886784bf" />
+
+
 3. 登録フォームに以下の情報を入力します：
 * **Username:** 好きなユーザー名（アルファベット・数字）
 * **Email:** **私有のメールアドレス**
 * **Password:** パスワード（忘れないように控えをとってください）
-
+<img width="1085" height="1018" alt="image" src="https://github.com/user-attachments/assets/1ca04694-2f4d-42ba-b464-ca8e8e29ce67" />
 
 4. 生年月日や国籍（Japan）などの基本情報を選択し、利用規約にチェックを入れます。
 5. **「Sign Up」** ボタンを押すと、入力したメールアドレス宛に確認メール（Verification Email）が届きます。
