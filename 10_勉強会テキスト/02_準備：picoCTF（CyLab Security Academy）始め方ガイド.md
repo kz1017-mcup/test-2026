@@ -52,6 +52,8 @@
 
 * **どんな機能？:** 初心者が「何から解けばいいかわからない」と迷わないよう、レベルやテーマ別に問題が順序立ててパッケージ化されている学習コースです。
 * **使い方:** 「Beginner（初心者向け）」などのパスを選択すると、順を追って基礎知識を学びながら問題をクリアしていくことができます。最初の学習に大変おすすめです！
+<img width="1076" height="961" alt="image" src="https://github.com/user-attachments/assets/700de707-0ef1-4dbb-ba95-129b07b5b088" />
+
 
 ### 📚 ② Challenge Library（問題ライブラリ）
 
@@ -61,6 +63,7 @@
 * **Search & Filters（検索・フィルター）:** キーワード検索や難易度順（Easy / Medium / Hard）の絞り込みが可能です。
 * **並び替え（Sort）:** 解かれた回数順（Solves）に並び替えると、人気の高い＝簡単な問題から順に挑戦できます。
 
+<img width="1077" height="824" alt="image" src="https://github.com/user-attachments/assets/523c725f-e831-42aa-ba35-d04ee6c70a38" />
 
 
 ---
