@@ -1,4 +1,4 @@
-# 🚀 picoCTF（CyLab Security Academy）始め方ガイド
+# 🚀 第2回：picoCTF（CyLab Security Academy）始め方ガイド
 
 今回は、世界中で使われているCTF学習プラットフォーム **「picoCTF」** のアカウント作成手順と、基本的なサイトの操作方法を解説します！
 
