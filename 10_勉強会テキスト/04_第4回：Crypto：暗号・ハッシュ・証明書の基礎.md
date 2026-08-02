@@ -27,7 +27,7 @@
 
 ### 2. 問題文
 
-https://learn.cylabacademy.org/library/68
+<https://learn.cylabacademy.org/library/68>
 
 > **【問題】 The Numbers**
 > 1枚の画像ファイルが提示されています。画像の中に書かれた数字の羅列を解読して、フラグを手に入れてください。
@@ -156,7 +156,7 @@ https://learn.cylabacademy.org/library/68
 
 ### 2. 問題文
 
-https://learn.cylabacademy.org/library/475
+<https://learn.cylabacademy.org/library/475>
 
 > **【問題】 hashcrack**
 > 管理者が脆弱なパスワード（ハッシュ化済み）を使用していたため、サーバーが侵害されました。
@@ -243,7 +243,7 @@ Webブラウザでサイトを開いたとき、アドレスバーに **「鍵�
 
 ### 2. 問題文
 
-https://learn.cylabacademy.org/library/367
+<https://learn.cylabacademy.org/library/367>
 
 > **【問題】 ReadMyCert**
 > `readmycert.csr` という「証明書署名要求（CSR）ファイル」が配布されています。このファイルの中身を解読して、埋め込まれているフラグを見つけてください。
@@ -286,28 +286,28 @@ CyberChefやブラウザの機能をフル活用して、パズルを解く感�
 
 ### 1. 【初級向け】transformation（文字コードとデータ復元）
 
-https://learn.cylabacademy.org/library/104
+<https://learn.cylabacademy.org/library/104>
 
 * **概要:** 一見すると意味不明な漢字の羅列から、元のアルファベットを復元する問題。
 * **ポイント:** 1つの文字の中に2文字分のデータが組み込まれています。CyberChefの「Magic」機能を使うと一瞬で解読できる感動が味わえます！
 
 ### 2. 【初級向け】substitution0（換字暗号の解読）
 
-https://learn.cylabacademy.org/library/307
+<https://learn.cylabacademy.org/library/307>
 
 * **概要:** アルファベットが別の文字に置き換えられたテキストを読み解く問題。
 * **ポイント:** 問題テキストの先頭に「置換用のアルファベット鍵」が用意されています。CyberChefの「Substitution Cipher」を使って鍵を入力し、一瞬で英文へ復元する快感を体験できます。
 
 ### 3. 【初級向け】credstuff（データ検索 × 簡易暗号の複合実践）
 
-https://learn.cylabacademy.org/library/261
+<https://learn.cylabacademy.org/library/261>
 
 * **概要:** 漏洩したユーザー名リストとパスワードリストから特定アカウントを探し出し、暗号を解読する問題。
 * **ポイント:** リストから特定のユーザーを見つけ出し、対応するパスワード（ROT13等で暗号化された文字）を解読します。「漏洩データの探索」と「解読」を組み合わせた実践的なトレーニングです。
 
 ### 4. 【初級向け】PW Crackシリーズ
 
-https://learn.cylabacademy.org/library?page=1&search=PW+Crack
+<https://learn.cylabacademy.org/library?page=1&search=PW+Crack>
 
 * **概要:** 配布されたPythonプログラム（.py）を読み解き、パスワードのチェック方法を解析して正しいパスワードを特定する問題です。
 * **ポイント:** 
@@ -319,7 +319,7 @@ https://learn.cylabacademy.org/library?page=1&search=PW+Crack
 
 ### 5. 【初級向け】Web Decode（開発者ツールとWebデータのデコード）
 
-https://learn.cylabacademy.org/library/427
+<https://learn.cylabacademy.org/library/427>
 
 * **概要:** 提供されたWebサイトをブラウザで巡回し、隠されたデータを見つけてデコードする問題。
 * **ポイント:** ブラウザの「開発者ツール（検証）」を開いてページのHTMLソースをチェックします。隠されたBase64文字列を見つけ出し、CyberChefで復元してフラグを獲得しましょう！
