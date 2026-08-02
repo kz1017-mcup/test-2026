@@ -305,7 +305,7 @@ https://learn.cylabacademy.org/library/261
 * **概要:** 漏洩したユーザー名リストとパスワードリストから特定アカウントを探し出し、暗号を解読する問題。
 * **ポイント:** リストから特定のユーザーを見つけ出し、対応するパスワード（ROT13等で暗号化された文字）を解読します。「漏洩データの探索」と「解読」を組み合わせた実践的なトレーニングです。
 
-### PW Crackシリーズ
+### 4. 【初級向け】PW Crackシリーズ
 
 https://learn.cylabacademy.org/library?page=1&search=PW+Crack
 
