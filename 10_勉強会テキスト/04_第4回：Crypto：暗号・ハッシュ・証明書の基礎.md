@@ -95,7 +95,7 @@
 
 そこでWebサイトは、入力されたパスワードを **「ハッシュ関数（MD5やSHA-1など）」** という計算ルールに通して、ランダムに見える固定長の文字列（ハッシュ値）に変換してから保存しています。
 
-```text
+```
 【あなたが入力した文字】      `myPassword123`
            │
            ▼ （ハッシュ関数で計算）
@@ -139,7 +139,7 @@
 
 ハッシュ解読サイト（CrackStationなど）や攻撃者のツールは、上記のようなランキング上位のパスワードのハッシュ値を事前にすべて計算して保持しています。
 
-```text
+```
 【攻撃者の照合用データベース】
 ハッシュ値: e10adc3949ba59abbe56e057f20f883e ➡ 元の文字: 123456
 ハッシュ値: 5f4dcc3b5aa765d61d8327deb882cf99 ➡ 元の文字: password
@@ -177,14 +177,14 @@
 #### 🛠️ 解読手順
 
 1. ターミナル（またはpicoCTFのWebShell）を開き、問題文に記載されている `nc` コマンドを実行して問題サーバーに接続します。
-```bash
-nc verbal-sleep.picoctf.net 57271  # (※ホスト・ポート番号は画面の表示に従ってください)
+```
+$ nc verbal-sleep.picoctf.net 57271  # (※ホスト・ポート番号は画面の表示に従ってください)
 
 ```
 
 
 2. 接続すると、1つ目のハッシュ値が表示されます。
-```text
+```
 We have identified a hash: 482c811da5d5b4bc6d497ffa98491e38
 Enter the password for identified hash: 
 
@@ -197,7 +197,7 @@ Enter the password for identified hash:
 
 4. ターミナルに戻り、`password123` と入力して Enter を押します。
 5. すると正解と判定され、続いて2つ目（別のハッシュアルゴリズム SHA-1 等）のハッシュ値が提示されます。
-```text
+```
 Correct! You've cracked the MD5 hash with no secret found!
 Crack this hash: b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
 Enter the password for the identified hash: 
