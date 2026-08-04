@@ -184,7 +184,6 @@ $ nc verbal-sleep.picoctf.net 57271
 
 
 2. 接続すると、1つ目のハッシュ値が表示されます。
-
 ```
 We have identified a hash: 482c811da5d5b4bc6d497ffa98491e38
 Enter the password for identified hash: 
@@ -197,7 +196,6 @@ Enter the password for identified hash:
 
 4. ターミナルに戻り、`password123` と入力して Enter を押します。
 5. すると正解と判定され、続いて2つ目（別のハッシュアルゴリズム SHA-1 等）のハッシュ値が提示されます。
-
 ```
 Correct! You've cracked the MD5 hash with no secret found!
 Crack this hash: b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
