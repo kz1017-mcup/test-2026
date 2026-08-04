@@ -28,15 +28,15 @@
 
 1. ブラウザで **<https://cylabacademy.org/>** にアクセスします。
 2. 画面右上にある **「Sign Up」** をクリックし、遷移したページで再度画面右上にある **「Sign Up」** をクリックします。
-<img width="1083" height="729" alt="image" src="https://github.com/user-attachments/assets/5dd3548a-8bbb-416d-b8bc-0301c471a36e" />
-<img width="1081" height="728" alt="image" src="https://github.com/user-attachments/assets/118dc1b2-1e86-423d-acd4-1b4a886784bf" />
+![02-01](../99_素材/02-01.png)
+![02-02](../99_素材/02-02.png)
 
 
 3. 登録フォームに以下の情報を入力します：
 * **Username:** 好きなユーザー名（アルファベット・数字）
 * **Email:** **私有のメールアドレス**
 * **Password:** パスワード（忘れないように控えをとってください）
-<img width="1085" height="1018" alt="image" src="https://github.com/user-attachments/assets/1ca04694-2f4d-42ba-b464-ca8e8e29ce67" />
+![02-03](../99_素材/02-03.png)
 
 4. 生年月日や国籍（Japan）などの基本情報を選択し、利用規約にチェックを入れます。
 5. **「Sign Up」** ボタンを押すと、入力したメールアドレス宛に確認メール（Verification Email）が届きます。
@@ -52,7 +52,7 @@
 
 * **どんな機能？:** 初心者が「何から解けばいいかわからない」と迷わないよう、レベルやテーマ別に問題が順序立ててパッケージ化されている学習コースです。
 * **使い方:** 「Beginner（初心者向け）」などのパスを選択すると、順を追って基礎知識を学びながら問題をクリアしていくことができます。最初の学習に大変おすすめです！
-<img width="1076" height="961" alt="image" src="https://github.com/user-attachments/assets/700de707-0ef1-4dbb-ba95-129b07b5b088" />
+![02-04](../99_素材/02-04.png)
 
 
 ### 📚 ② Challenge Library（問題ライブラリ）
@@ -63,7 +63,7 @@
 * **Search & Filters（検索・フィルター）:** キーワード検索や難易度順（Easy / Medium / Hard）の絞り込みが可能です。
 * **並び替え（Sort）:** 解かれた回数順（Solves）に並び替えると、人気の高い＝簡単な問題から順に挑戦できます。
 
-<img width="1077" height="824" alt="image" src="https://github.com/user-attachments/assets/523c725f-e831-42aa-ba35-d04ee6c70a38" />
+![02-05](../99_素材/02-05.png)
 
 
 ---
@@ -100,7 +100,7 @@
 2. **「Submit Flag」** ボタンを押します。
 3. 正解すると **「Correct!」** と表示され、ポイントが加算されます！解いた問題には正解マークがつきます。
 
-<img width="1080" height="826" alt="image" src="https://github.com/user-attachments/assets/2b2f6bc7-6c1a-42f3-aabd-4444d8b5a012" />
+![02-06](../99_素材/02-06.png)
 
 ---
 
