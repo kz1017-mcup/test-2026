@@ -241,7 +241,7 @@ TCPとUDP、どちらも「Follow Stream」でまとめて読めるという操�
 
 ---
 
-## 🚀 次のステップ！picoCTFおすすめNetwork/Forensics問題5選
+## 🚀 次のステップ！picoCTFおすすめNetwork/Forensics問題5選＋読み物
 
 ### 1. 【自習向け】PcapPoisoning
 
@@ -277,6 +277,13 @@ TCPとUDP、どちらも「Follow Stream」でまとめて読めるという操�
 
 * **概要:** 上の問題の「続編」にあたる、少し難易度が上がる問題（正答率は上の問題より低めです）。
 * **ポイント:** 4番の問題をクリアしたら、腕試しにぜひ挑戦してみてください。
+
+### 6. 【読み物】Firesheepが公共Wi-Fiを揺るがした話
+
+<https://krebsonsecurity.com/2010/10/firesheep-baaaaad-news-for-the-unwary/>
+
+* **概要:** 2010年、セキュリティ研究者Eric Butlerが公開した「Firesheep」というFirefoxの拡張機能は、公共Wi-Fi上を流れる**暗号化されていないCookie**を盗み見るだけで、他人のFacebookやTwitterアカウントに誰でもワンクリックでなりすませてしまう、という衝撃的なデモでした。
+* **ポイント:** 今回学んだ「Follow TCP Stream」で平文Cookieが丸見えになる体験が、まさにこの事件の再現です。この一件がきっかけで、Webサイト全体を`https`化する動きが一気に加速したと言われています（英語記事ですが、ブラウザの翻訳機能で読めます）。
 
 ---
 
