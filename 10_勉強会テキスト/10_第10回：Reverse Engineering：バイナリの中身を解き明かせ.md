@@ -379,42 +379,98 @@ strings gatekeeper
 
 | 場所 | 名前 | 内容 |
 | --- | --- | --- |
-| 左 | **Symbol Tree**（シンボルツリー） | 関数などの名前の一覧。`Functions`の中に関数が並ぶ |
+| 左 | **Symbol Tree**（シンボルツリー） | 関数などの名前の一覧 |
 | 中央 | **Listing**（リスティング） | 逆アセンブル結果（アセンブリ言語の命令の並び） |
 | 右 | **Decompile**（デコンパイル） | **C言語に近い形に復元されたコード**（今回のメイン） |
 
-6. **`main`を開く**：左側のSymbol Treeで`Functions`を開くと、`is_valid_decimal`、`is_valid_hex`、`reveal_flag`、`main` といった、意味の分かる名前が並びます。**`main`をダブルクリック**すると、右側のDecompileウィンドウに、`main`関数の中身が表示されます。
+6. **`main`を開く**：左側のSymbol Treeに、`is_valid_decimal`、`is_valid_hex`、`main` といった、意味の分かる名前の関数が並んでいます。**`main`をダブルクリック**すると、右側のDecompileウィンドウ（タイトルが`Decompile: main`）に、`main`関数の中身がC言語に近い形で表示されます。
 
-> 🔎 **【要確認：Ghidraの画面】** 上記の手順の、メニュー名・ボタン名・ウィンドウ名が、実際のGhidraの画面と合っているかを確認してください。また、Decompileウィンドウの変数名（`local_38`のような仮の名前）や、条件式の表記も、実際の画面で確認して、以下の疑似コードと対応づけて書き直してください。
-
-`main`の中身は、次のような処理に整理できます（アセンブリを読み解いた結果を、C言語風にまとめたものです）。
+Decompileウィンドウには、次のようなコードが表示されます。
 
 ```c
-scanf("%31s", buf);                    // 入力を文字列として受け取る
-len = strlen(buf);                     // 入力の「文字数」を数える
-value = -1;
+undefined8 main(void)
 
-if (is_valid_decimal(buf)) {
-    value = atoi(buf);                 // 10進数として解釈
-} else if (is_valid_hex(buf)) {
-    value = strtol(buf, NULL, 16);     // 16進数として解釈
-} else {
-    puts("Invalid input.");
-    return 1;
+{
+  int iVar1;
+  size_t sVar2;
+  long lVar3;
+  undefined8 uVar4;
+  long in_FS_OFFSET;
+  int local_40;
+  char local_38 [40];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  printf("Enter a numeric code (must be > 999 ): ");
+  fflush(stdout);
+  __isoc99_scanf(&DAT_00102070,local_38);
+  sVar2 = strlen(local_38);
+  iVar1 = is_valid_decimal(local_38);
+  if (iVar1 == 0) {
+    iVar1 = is_valid_hex(local_38);
+    if (iVar1 == 0) {
+      puts("Invalid input.");
+      uVar4 = 1;
+      goto LAB_001016b9;
+    }
+    lVar3 = strtol(local_38,(char **)0x0,0x10);
+    local_40 = (int)lVar3;
+  }
+  else {
+    local_40 = atoi(local_38);
+  }
+  if (local_40 < 1000) {
+    puts("Too small.");
+  }
+  else if (local_40 < 10000) {
+    if ((int)sVar2 == 3) {
+      reveal_flag();
+    }
+    else {
+      puts("Access Denied.");
+    }
+  }
+  else {
+    puts("Too high.");
+  }
+  uVar4 = 0;
+LAB_001016b9:
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar4;
 }
-
-if (value <= 999)        puts("Too small.");
-else if (value > 9999)   puts("Too high.");
-else if (len == 3)       reveal_flag();        // ← フラグはここ！
-else                     puts("Access Denied.");
 ```
 
-この条件分岐を、上から順に読み解いていきます。
+最初は難しそうに見えますが、**読むべきところは限られています**。順番に読み解いていきましょう。
+
+**① 変数名の意味を推測する**
+
+Ghidraは、元のソースコードの変数名を知りません。そのため、`local_38`や`sVar2`のような**仮の名前**が付きます。プログラムの動きから、意味を推測して読み替えます。
+
+| Ghidraの変数名 | 意味（推測） | 根拠 |
+| --- | --- | --- |
+| `local_38` | **入力された文字列** | `char local_38 [40]`（文字の配列）で、`scanf`の結果が入る |
+| `sVar2` | **入力の文字数** | `strlen(local_38)`の結果（`strlen`は文字数を数える関数） |
+| `local_40` | **入力を数値に変換した値** | `atoi`や`strtol`の結果が入る |
+
+**② 数値への変換を読む**
+
+* `is_valid_decimal(local_38)`が真なら、`atoi`で**10進数**として数値に変換します
+* そうでなく、`is_valid_hex(local_38)`が真なら、`strtol(local_38, 0, 0x10)`で数値に変換します。`0x10`は10進数の**16**なので、**16進数**として変換していることが分かります
+* どちらでもなければ、`Invalid input.`と表示して終了します
+
+**③ 条件分岐を読む**
+
+数値（`local_40`）と文字数（`sVar2`）に対する条件分岐は、次のようになっています。
 
 1. **まず10進数として正しいかを調べ、違えば16進数として調べる**（判定の**順番**に注目）
-2. 数値が**999以下**なら`Too small.`
-3. 数値が**9999より大きい**と`Too high.`
-4. 1000〜9999の範囲に入っていても、**入力の文字数がちょうど3文字**のときだけ`reveal_flag()`（フラグ表示）が呼ばれる。それ以外は`Access Denied.`
+2. 数値が**1000未満**（`local_40 < 1000`）なら`Too small.`
+3. 数値が**10000以上**（`local_40 < 10000`でない）なら`Too high.`
+4. 1000〜9999の範囲に入っていても、**入力の文字数がちょうど3文字**（`(int)sVar2 == 3`）のときだけ`reveal_flag()`（フラグ表示）が呼ばれる。それ以外は`Access Denied.`
+
+なお、`local_10`に関する行や`__stack_chk_fail`は、プログラムが壊されていないかを確認するための**スタック保護**の処理です。今回の解析には関係ないので、読み飛ばして構いません。
 
 #### 🛠️ ステップ4：条件を満たす入力を逆算する
 
