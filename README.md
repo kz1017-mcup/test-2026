@@ -9,4 +9,4 @@
 - [第7回： Forensics：ファイルに隠された秘密](10_勉強会テキスト/07_第7回：Forensics：ファイルに隠された秘密.md)
 - [第8回： Binary Exploitation：プログラムのメモリを乗っ取れ](10_勉強会テキスト/08_第8回：Binary Exploitation：プログラムのメモリを乗っ取れ.md)
 - [第9回： 総仕上げ：ミニ社内CTF（模擬戦）](10_勉強会テキスト/09_第9回：総仕上げ：ミニ社内CTF（模擬戦）.md)
-- [第10回： Reverse Engineering：バイナリの中身を解き明かせ](10_勉強会テキスト/10_第10回：Reverse Engineering：バイナリの中身を解き明かせ.md)
+- [（おまけ）第10回： Reverse Engineering：バイナリの中身を解き明かせ](10_勉強会テキスト/10_第10回：Reverse Engineering：バイナリの中身を解き明かせ.md)
